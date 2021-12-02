@@ -1,0 +1,32 @@
+[tool.black]
+exclude = '''
+/(
+  | alembic
+  | __pycache__
+)/
+
+'''
+
+[tool.poetry]
+name = "url_shortener"
+version = "0.1.0"
+description ="A url shortener and redirector. Each redirect will be counted. Returners will be roughly recognized so that different counters can be used to differ between returners an new visitors."
+authors = ["Tutor Exilius"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.0.2"
+SQLAlchemy = "^1.4.27"
+shortuuid = "^1.0.8"
+validators = "^0.18.2"
+
+[tool.poetry.dev-dependencies]
+alembic = "^1.7.5"
+black = "^21.11b1"
+flake8 = "^4.0.1"
+mypy = "^0.910"
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
